@@ -61,7 +61,7 @@
                     <img src="{{asset('/')}}dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Hello</a>
+                    <a href="#" class="d-block">{{auth()->user()->name}}</a>
                 </div>
             </div>
 
@@ -75,9 +75,53 @@
 
                     <li class="nav-item">
                         <a href="" class="nav-link">
-                            <i class="fa fa-circle-o nav-icon"></i>
-                            <p> Role  </p>
+                            <i class="nav-icon fa fa-lock"></i>
+                            <p>
+                                Manage Role
+                            </p>
                         </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="nav-icon fa fa-user-circle"></i>
+                            <p>
+                                Manage Permission
+                            </p>
+                        </a>
+                    </li>
+
+
+                    {{--Manage User--}}
+
+                    <li class="nav-item has-treeview">
+                        <a href="" class="nav-link ">
+                            <i class="nav-icon fa fa-group"></i>
+                            <p>
+                                Manage User
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p> Create User</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p> User List </p>
+                                </a>
+                            </li>
+                        </ul>
+
                     </li>
 
 
