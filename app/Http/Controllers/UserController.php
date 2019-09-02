@@ -112,7 +112,7 @@ class UserController extends Controller {
             'name'=>'required|max:120',
         ]);
 
-        $input = $request->only(['name', 'email', 'password']); //Retreive the name, email and password fields
+        $input = $request->only(['name', 'email']); //Retreive the name, email and password fields
 
         $roles = $request['roles']; //Retreive all roles
 
