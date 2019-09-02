@@ -30,6 +30,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    //Set all Password As bcrypt
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
+
+
     /**
      * The attributes that should be cast to native types.
      *
